@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAuthToken } from './helpers/getToken';
+import { getAuthToken } from './helpers/getAuthToken';
 
 export const MusicApp = () => {
 	getAuthToken();
