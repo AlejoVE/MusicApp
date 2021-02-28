@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const SongScreen = () => {
+export const SongScreen = ({ name }) => {
 	return (
-		<div>
-			<h1>Song Screen</h1>
-		</div>
+		<li>
+			<h2>{name}</h2>
+		</li>
 	);
 };

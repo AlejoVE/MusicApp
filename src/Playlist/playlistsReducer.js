@@ -11,7 +11,8 @@ export const playlistsReducer = (state = {}, action) => {
 		case types.setActivePlaylist:
 			return {
 				...state,
-				activeListID: action.payload,
+				activePlaylistId: action.payload,
+				isSelected: true,
 			};
 
 		default:

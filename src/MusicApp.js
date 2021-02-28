@@ -1,19 +1,49 @@
 import React, { useReducer } from 'react';
 
 import { AppRouter } from './router/AppRouter';
-import { PlaylistsContext } from './Playlist/PlaylistsContex';
+import { PlaylistsContext } from './Playlist/PlaylistsContext';
 import { playlistsReducer } from './Playlist/playlistsReducer';
+import { categoriesReducer } from './categories/categoriesReducer';
+import { authReducer } from './auth/authReducer';
+import { CategoryContext } from './categories/CategoriesContext';
+import { AuthContext } from './auth/AuthContext';
 
 const init = () => {
-	return { playlists: [] };
+	return { activePlaylistId: '', isSelected: false };
+};
+
+const initCategories = () => {
+	return { activeCategory: '' };
+};
+
+const initAuth = () => {
+	return { token: '' };
 };
 
 export const MusicApp = () => {
-	const [playlists, dispatch] = useReducer(playlistsReducer, {}, init);
+	const [playlistsState, playlistDispatch] = useReducer(
+		playlistsReducer,
+		{},
+		init
+	);
+	const [activeCategory, categoriesDispatch] = useReducer(
+		categoriesReducer,
+		{},
+		initCategories
+	);
 
+	const [authState, authDispatch] = useReducer(authReducer, {}, initAuth);
 	return (
-		<PlaylistsContext.Provider value={{ playlists, dispatch }}>
-			<AppRouter />
-		</PlaylistsContext.Provider>
+		<AuthContext.Provider value={{ authState, authDispatch }}>
+			<CategoryContext.Provider
+				value={{ activeCategory, categoriesDispatch }}
+			>
+				<PlaylistsContext.Provider
+					value={{ playlistsState, playlistDispatch }}
+				>
+					<AppRouter />
+				</PlaylistsContext.Provider>
+			</CategoryContext.Provider>
+		</AuthContext.Provider>
 	);
 };

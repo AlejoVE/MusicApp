@@ -1,0 +1,86 @@
+/* Header */
+.header-container {
+  background-color: #5fd662;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.header-img {
+  width: 70%; }
+
+.category-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  height: 50vh;
+  margin-bottom: 30px; }
+
+/* Category card component */
+.category-card {
+  width: 25%;
+  height: 45%;
+  text-align: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .category-card h2 {
+    top: 0px;
+    white-space: initial;
+    font-size: 100%;
+    font-weight: bold; }
+
+.main-container {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  justify-content: center; }
+
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform; }
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
+
+.link {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 25px;
+  left: 100px; }
+
+.button {
+  text-align: center;
+  background-color: #5fd662;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  width: 200px;
+  height: 40px;
+  display: block;
+  margin: auto;
+  margin-bottom: 40px; }
+
+body {
+  /* background-color: #121212; */
+  /* background-image: url('https://images.pexels.com/photos/734918/pexels-photo-734918.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'); */
+  /* background-image: url('https://images.pexels.com/photos/705793/pexels-photo-705793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'); */
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+/*# sourceMappingURL=style.css.map */

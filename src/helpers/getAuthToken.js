@@ -13,7 +13,7 @@ export const getAuthToken = async () => {
 	});
 
 	const { access_token: token } = await res.json();
-	console.log(token);
+	localStorage.setItem('authToken', token);
 
 	return token;
 };

@@ -1,0 +1,30 @@
+.category-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+	height: 50vh;
+	margin-bottom: 30px;
+}
+
+/* Category card component */
+
+.category-card {
+	width: 25%;
+	height: 45%;
+	text-align: center;
+	align-items: center;
+	color: white;
+	margin-bottom: 5px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	h2 {
+		top: 0px;
+		white-space: initial;
+		font-size: 100%;
+		font-weight: bold;
+	}
+}

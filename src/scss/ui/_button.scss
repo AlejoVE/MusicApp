@@ -1,0 +1,13 @@
+@import '../var';
+
+.button {
+	text-align: center;
+	background-color: $green-spotify;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	width: 200px;
+	height: 40px;
+	display: block;
+	margin: auto;
+	margin-bottom: 40px;
+}

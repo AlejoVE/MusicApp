@@ -14,5 +14,5 @@ export const getCategories = async () => {
 
 	const { categories } = await res.json();
 
-	return categories.items;
+	return { token, categories: categories.items };
 };

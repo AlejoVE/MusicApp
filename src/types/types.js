@@ -1,7 +1,9 @@
 export const types = {
-	getToken: '[auth] get token',
+	SetToken: '[auth] get token',
 
+	setCategories: '[categories] set lists of categories',
 	getCategories: '[categories] get lists of categories',
+	setActiveCategory: '[categories] set active category',
 
 	getPlaylists: '[playlists] get lists of playlists',
 	getSongs: '[playlists] get songs in playlist',
