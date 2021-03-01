@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../auth/AuthContext';
+import { getArtistsString } from '../helpers/getArtistsString';
 import { useFetchSongs } from '../hooks/useFetchSongs';
 import { PlaylistsContext } from '../Playlist/PlaylistsContext';
 import { SongsContext } from '../songs/SongsContext';
 import { types } from '../types/types';
+import { SongList } from './SongList';
 import { SongScreen } from './SongScreen';
 
 export const SongsContainer = () => {
@@ -20,12 +22,6 @@ export const SongsContainer = () => {
 
 	console.log('My songs', songs);
 
-	//Tengo que hacer un context para las canciones y usar una action que cambie el
-	//IsLoading en el context de las canciones, debo hacer eso en el useFetchSongs
-
-	// const [isLoading, setIsLoading] = useState(true);
-	// const [songs, setSongs] = useState([]);
-
 	useEffect(() => {
 		songsDispatch({
 			type: types.setSongs,
@@ -37,7 +33,17 @@ export const SongsContainer = () => {
 		<div>
 			<ul>
 				{!songsIsLoading ? (
-					songs.map(({ name }) => <SongScreen name={name} />)
+					songs.map(({ name, album, artists }) => {
+						// const artistsNames = getArtistsString(artists);
+
+						return (
+							<SongList
+								name={name}
+								// album={album.name}
+								// artists={artistsNames}
+							/>
+						);
+					})
 				) : (
 					<h2>Loading...</h2>
 				)}

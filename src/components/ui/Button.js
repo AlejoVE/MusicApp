@@ -14,7 +14,7 @@ export const Button = ({ value, id }) => {
 		playlistDispatch(action);
 	};
 	return (
-		<button className='button hvr-grow' onClick={handleClick}>
+		<button className='btn hvr-grow' onClick={handleClick}>
 			{value}
 		</button>
 	);

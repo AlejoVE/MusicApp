@@ -4,7 +4,7 @@ import { CategoryContext } from '../categories/CategoriesContext';
 import { useFetchPlaylists } from '../hooks/useFetchPlaylists';
 import { Playlist } from './Playlist';
 
-export const PlaylistsContainer = () => {
+export const PlaylistsContainer = ({ history }) => {
 	const { authState } = useContext(AuthContext);
 	const { token } = authState;
 
@@ -17,10 +17,16 @@ export const PlaylistsContainer = () => {
 
 	const { playlists } = useFetchPlaylists(token, categoryId);
 
+	const goBack = () => {
+		history.push('/');
+	};
+
 	return (
-		<div>
-			<h2>{categoryName}</h2>
-			<ul>
+		<div className='playlists-container'>
+			<div className='header'>
+				<h2>{categoryName}</h2>
+			</div>
+			<ul className='list'>
 				{
 					// prettier/ignore
 					playlists.map(({ id, name, description, tracks }) => {
@@ -36,6 +42,9 @@ export const PlaylistsContainer = () => {
 					})
 				}
 			</ul>
+			<button className='goBack hvr-grow' onClick={goBack}>
+				Go back
+			</button>
 		</div>
 	);
 };

@@ -3,7 +3,7 @@ const base_URL = 'https://api.spotify.com/v1/browse/categories';
 
 export const getPlaylistByCategory = async (token, category_id) => {
 	try {
-		const limit = 10;
+		const limit = 5;
 
 		const res = await fetch(
 			`${base_URL}/${category_id}/playlists?limit=${limit}`,

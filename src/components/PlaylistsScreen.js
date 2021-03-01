@@ -1,24 +1,20 @@
 import React, { useContext } from 'react';
 import { PlaylistsContext } from '../Playlist/PlaylistsContext';
+import { NotSelected } from './NotSelected';
 import { PlaylistsContainer } from './PlaylistsContainer';
 import { SongsContainer } from './SongsContainer';
 
 export const PlaylistsScreen = ({ history }) => {
 	const { playlistsState } = useContext(PlaylistsContext);
 	const { isSelected } = playlistsState;
-	console.log(isSelected);
-
-	const goBack = () => {
-		history.push('/');
-	};
 
 	return (
-		<div>
-			<PlaylistsContainer />
+		<>
+			<div className='playlists-screen-container'>
+				<PlaylistsContainer history={history} />
 
-			{!isSelected ? <h2>Select a playlists</h2> : <SongsContainer />}
-
-			<button onClick={goBack}>Go back</button>
-		</div>
+				{!isSelected ? <NotSelected /> : <SongsContainer />}
+			</div>
+		</>
 	);
 };

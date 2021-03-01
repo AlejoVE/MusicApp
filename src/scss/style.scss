@@ -1,8 +1,10 @@
 @import './main.scss';
 @import './ui.scss';
+@import './playlists.scss';
+@import './var';
 
 body {
-	/* background-color: #121212; */
+	background-color: $black-spotify;
 
 	/* background-image: url('https://images.pexels.com/photos/734918/pexels-photo-734918.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'); */
 	// background-image: url('https://images.pexels.com/photos/1481309/pexels-photo-1481309.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');

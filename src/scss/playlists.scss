@@ -1,0 +1,11 @@
+@import './PlaylistsScreen/playlistsContainer';
+@import './PlaylistsScreen//Playlist';
+@import './PlaylistsScreen/NotSelected';
+
+.playlists-screen-container {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin: auto;
+	font-family: 'Montserrat', sans-serif;
+}

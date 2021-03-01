@@ -13,7 +13,7 @@ export const MainScreen = () => {
 				></img>
 			</div>
 			<CategoryContainer />
-			<Button value='My playlists' />
+			<button className='hvr-grow '>My playlists</button>
 		</div>
 	);
 };
