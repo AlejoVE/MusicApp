@@ -33,14 +33,15 @@ export const SongsContainer = () => {
 		<div>
 			<ul>
 				{!songsIsLoading ? (
-					songs.map(({ name, album, artists }) => {
+					songs.map(({ name, album, artists, id }) => {
 						// const artistsNames = getArtistsString(artists);
 
 						return (
 							<SongList
 								name={name}
-								// album={album.name}
-								// artists={artistsNames}
+								key={id}
+								album={album}
+								artists={artists}
 							/>
 						);
 					})

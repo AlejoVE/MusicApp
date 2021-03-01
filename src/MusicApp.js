@@ -23,7 +23,7 @@ const initAuth = () => {
 };
 
 const initSongs = () => {
-	return { songs: [], songsIsLoading: true };
+	return { songs: [], songsIsLoading: true, activeSong: {} };
 };
 
 export const MusicApp = () => {

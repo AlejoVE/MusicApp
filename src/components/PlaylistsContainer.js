@@ -7,6 +7,7 @@ import { Playlist } from './Playlist';
 export const PlaylistsContainer = ({ history }) => {
 	const { authState } = useContext(AuthContext);
 	const { token } = authState;
+	console.log(token);
 
 	const { activeCategory } = useContext(CategoryContext);
 	const { activeCategory: myCategory } = activeCategory;

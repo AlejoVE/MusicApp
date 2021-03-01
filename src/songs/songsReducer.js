@@ -15,6 +15,12 @@ export const songsReducer = (state = {}, action) => {
 				songsIsLoading: true,
 			};
 
+		case types.setActiveSong:
+			return {
+				...state,
+				activeSong: action.payload,
+			};
+
 		default:
 			return state;
 	}
