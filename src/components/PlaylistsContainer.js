@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../auth/AuthContext';
-import { authReducer } from '../auth/authReducer';
 import { CategoryContext } from '../categories/CategoriesContext';
 import { useFetchPlaylists } from '../hooks/useFetchPlaylists';
 import { Playlist } from './Playlist';

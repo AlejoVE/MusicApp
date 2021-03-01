@@ -9,5 +9,7 @@ export const types = {
 	getSongs: '[playlists] get songs in playlist',
 	setActivePlaylist: '[playlists] set active playlist',
 
-	getSong: '[song] get song details',
+	setSongs: '[songs] set songs',
+	setActiveSong: '[songs] set active song',
+	songsIsLoading: '[songs] songs is loading',
 };
