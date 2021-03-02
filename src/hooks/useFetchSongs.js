@@ -16,7 +16,7 @@ export const useFetchSongs = (token, playlist_id) => {
 				songs: [...data],
 			});
 		});
-	}, [playlist_id]);
+	}, [playlist_id, songsDispatch, token]);
 
 	return state;
 };

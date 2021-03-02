@@ -17,7 +17,7 @@ export const useFetchCategories = () => {
 				categories: [...data.categories],
 			});
 		});
-	}, []);
+	}, [authDispatch]);
 
 	return state;
 };

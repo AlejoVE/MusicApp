@@ -1,6 +1,5 @@
 import React from 'react';
 import { CategoryContainer } from './CategoryContainer';
-import { Button } from './ui/Button';
 
 export const MainScreen = () => {
 	return (

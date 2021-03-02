@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SongsContext } from '../songs/SongsContext';
 import { types } from '../types/types';
 
-export const SongList = ({ name, artists, album }) => {
+export const SongList = ({ name, artists, album, id }) => {
 	const categoryName = localStorage.getItem('categoryName');
 	const { songsDispatch } = useContext(SongsContext);
 
@@ -14,14 +14,13 @@ export const SongList = ({ name, artists, album }) => {
 				name,
 				artists,
 				album,
+				id,
 			},
 		});
 	};
 	return (
 		<li onClick={setActiveSong}>
 			<Link to={`/playlists/${categoryName}/song`}>{name}</Link>
-			{/* <p>Artists: {artists}</p>
-			<em>Album: {album}</em> */}
 		</li>
 	);
 };

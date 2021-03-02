@@ -1,4 +1,3 @@
-import { getAuthToken } from './getAuthToken';
 const base_URL = 'https://api.spotify.com/v1/browse/categories';
 
 export const getPlaylistByCategory = async (token, category_id) => {
@@ -22,7 +21,6 @@ export const getPlaylistByCategory = async (token, category_id) => {
 		if (playlists === undefined) {
 			return [];
 		}
-		console.log(playlists.items);
 
 		return playlists.items;
 	} catch (error) {
