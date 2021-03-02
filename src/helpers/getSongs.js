@@ -1,7 +1,7 @@
 const base_url = `https://api.spotify.com/v1/playlists`;
 
 export const getSongs = async (token, playlist_id) => {
-	const limit = 10;
+	const limit = 100;
 
 	try {
 		const res = await fetch(

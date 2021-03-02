@@ -65,6 +65,9 @@
     bottom: 0;
     margin: auto; }
 
+.songs-container {
+  border: 2px solid red; }
+
 .playlists-screen-container {
   display: flex;
   flex-direction: row;

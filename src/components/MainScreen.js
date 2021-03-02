@@ -12,7 +12,6 @@ export const MainScreen = () => {
 				></img>
 			</div>
 			<CategoryContainer />
-			<button className='hvr-grow '>My playlists</button>
 		</div>
 	);
 };

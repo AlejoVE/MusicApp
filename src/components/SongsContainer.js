@@ -26,10 +26,10 @@ export const SongsContainer = () => {
 	}, [activePlaylistId, songsDispatch]);
 
 	return (
-		<div>
+		<div className='songs-container'>
 			<ul>
 				{!songsIsLoading ? (
-					songs.map(({ name, album, artists, id }) => {
+					songs.map(({ name, album, artists, id }, i) => {
 						return (
 							<SongList
 								name={name}
@@ -37,6 +37,7 @@ export const SongsContainer = () => {
 								album={album}
 								artists={artists}
 								id={id}
+								index={i + 1}
 							/>
 						);
 					})

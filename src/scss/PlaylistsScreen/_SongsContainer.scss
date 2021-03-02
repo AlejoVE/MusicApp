@@ -1,0 +1,30 @@
+@import '../var';
+
+.songs-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	overflow-y: auto;
+	height: 100vh;
+
+	ul {
+		list-style: none;
+		height: 90%;
+	}
+
+	li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		border-bottom: 1px solid #373434;
+		height: 50px;
+		align-items: center;
+		a {
+			color: white;
+			font-size: 100%;
+			text-decoration: none;
+		}
+	}
+}
