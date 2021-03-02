@@ -12,7 +12,7 @@ export const useFetchPlaylists = (token, category_id) => {
 				playlists: [...data],
 			});
 		});
-	}, [category_id]);
+	}, [category_id, token]);
 
 	return state;
 };
