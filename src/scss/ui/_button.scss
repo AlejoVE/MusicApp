@@ -1,0 +1,40 @@
+@import '../var';
+
+.button {
+	text-align: center;
+	background-color: $green-spotify;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	width: 100px;
+	height: 40px;
+	display: block;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.btn {
+	// border-radius: 5px;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	font-family: 'Montserrat', sans-serif;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+	padding: 5x 10px;
+	font-size: 10px;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 20px;
+	color: white;
+	// background-color: $green-spotify;
+	position: relative;
+	display: inline-block;
+}
+
+.btn:active {
+	transform: translate(0px, 5px);
+	-webkit-transform: translate(0px, 5px);
+	box-shadow: 0px 1px 0px 0px;
+}

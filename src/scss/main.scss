@@ -1,0 +1,90 @@
+@import './MainScreen/header';
+@import './MainScreen/category';
+
+.main-container {
+	width: 80%;
+	height: 100vh;
+	margin: auto;
+	justify-content: center;
+
+	button {
+		text-align: center;
+		background-color: $green-spotify;
+		font-family: 'Montserrat', sans-serif;
+		border-radius: 50px;
+		font-weight: 700;
+		width: 200px;
+		height: 40px;
+		display: block;
+		margin: auto;
+		margin-bottom: 40px;
+	}
+}
+
+.hvr-grow {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.hvr.mine {
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+}
+.hvr-mine:hover,
+.hvr-mine:focus,
+.hvr-mine:active {
+	background-color: $green-spotify;
+	cursor: pointer;
+	transition-duration: 0.3s;
+
+	a {
+		color: $black-spotify;
+	}
+}
+
+.link {
+	font-size: 20px;
+	color: white;
+	position: absolute;
+	bottom: 25px;
+	left: 100px;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: $black-spotify;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

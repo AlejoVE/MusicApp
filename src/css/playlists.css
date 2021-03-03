@@ -1,0 +1,98 @@
+.playlists-container {
+  width: 50%;
+  background-color: #131313;
+  border: 1px ridge #eeee; }
+  .playlists-container h2 {
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0; }
+  .playlists-container .goBack {
+    text-align: center;
+    background-color: #5fd662;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 50px;
+    font-weight: 700;
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px; }
+
+.header {
+  background-color: #5fd662;
+  padding-bottom: 5px;
+  padding-top: 5px; }
+
+.list {
+  list-style: none;
+  padding-inline-start: 0px; }
+  .list h2 {
+    text-align: left; }
+
+.li-element {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40%;
+  background-color: #131313;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eeee; }
+  .li-element div {
+    width: 80%; }
+  .li-element h2,
+  .li-element p,
+  .li-element em {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    padding-left: 15px;
+    color: #eeeeee;
+    margin-bottom: 10px; }
+
+.not-selected-container {
+  background-color: #131313;
+  width: 50%;
+  position: relative;
+  color: white;
+  text-align: center; }
+  .not-selected-container img {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+
+.songs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  overflow-y: auto;
+  height: 100vh; }
+  .songs-container ul {
+    list-style: none;
+    height: 90%; }
+  .songs-container li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #373434;
+    height: 50px;
+    align-items: center; }
+    .songs-container li a {
+      color: white;
+      font-size: 100%;
+      text-decoration: none; }
+
+.playlists-screen-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif; }
+
+/*# sourceMappingURL=playlists.css.map */

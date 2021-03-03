@@ -1,0 +1,40 @@
+@import '../var';
+
+.playlists-container {
+	width: 50%;
+	background-color: $black-spotify;
+	border: 1px ridge $gray;
+
+	h2 {
+		text-align: center;
+		margin-block-start: 0;
+		margin-block-end: 0;
+	}
+
+	.goBack {
+		text-align: center;
+		background-color: $green-spotify;
+		font-family: 'Montserrat', sans-serif;
+		border-radius: 50px;
+		font-weight: 700;
+		width: 200px;
+		height: 40px;
+		display: block;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+}
+
+.header {
+	background-color: $green-spotify;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.list {
+	list-style: none;
+	padding-inline-start: 0px;
+	h2 {
+		text-align: left;
+	}
+}
