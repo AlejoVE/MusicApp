@@ -32,7 +32,7 @@ export const MusicApp = () => {
 		{},
 		init
 	);
-	const [activeCategory, categoriesDispatch] = useReducer(
+	const [categoriesState, categoriesDispatch] = useReducer(
 		categoriesReducer,
 		{},
 		initCategories
@@ -45,7 +45,7 @@ export const MusicApp = () => {
 		<AuthContext.Provider value={{ authState, authDispatch }}>
 			<SongsContext.Provider value={{ songsState, songsDispatch }}>
 				<CategoryContext.Provider
-					value={{ activeCategory, categoriesDispatch }}
+					value={{ categoriesState, categoriesDispatch }}
 				>
 					<PlaylistsContext.Provider
 						value={{ playlistsState, playlistDispatch }}

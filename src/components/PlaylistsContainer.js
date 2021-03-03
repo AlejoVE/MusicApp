@@ -13,8 +13,8 @@ export const PlaylistsContainer = ({ history }) => {
 	const { songsDispatch } = useContext(SongsContext);
 	const { token } = authState;
 
-	const { activeCategory } = useContext(CategoryContext);
-	const { activeCategory: myCategory } = activeCategory;
+	const { categoriesState } = useContext(CategoryContext);
+	const { activeCategory: myCategory } = categoriesState;
 	const { id, name } = myCategory;
 
 	const categoryId = localStorage.getItem('categoryId') || id;
