@@ -2,6 +2,7 @@
 
 .song-screen-container {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	width: 100%;
 	margin: auto;
@@ -32,7 +33,7 @@
 		color: white;
 		height: 50%;
 		width: 80%;
-		margin: auto;
+		margin-left: 0px;
 		margin-top: 20px;
 		font-size: 25px;
 		li {
@@ -62,7 +63,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	margin-bottom: 80px;
+	margin-bottom: 0px;
 }
 
 .button {

@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { SongsContext } from '../songs/SongsContext';
 import { addSong } from '../helpers/addSong';
 import { getArtistsString } from '../helpers/getArtistsString';
+import { Footer } from './ui/Footer';
 
 export const SongScreen = () => {
 	const history = useHistory();
@@ -26,7 +27,7 @@ export const SongScreen = () => {
 	};
 
 	return (
-		<div className='song-screen-container'>
+		<div className='song-screen-container animate__animated animate__fadeInLeft animate__faster'>
 			<div className='song-card-container '>
 				<img src={`${images[0].url}`} alt='Album cover'></img>
 				<div className='song-description-container'>
@@ -42,7 +43,7 @@ export const SongScreen = () => {
 
 					<div className='buttons-container'>
 						<button className='go-back hvr-grow' onClick={goBack}>
-							Go back
+							{'< Go back'}
 						</button>
 						<button className='button hvr-grow' onClick={handleAddSong}>
 							Add song to Playlist
@@ -50,6 +51,7 @@ export const SongScreen = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

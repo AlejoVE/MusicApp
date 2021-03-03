@@ -22,7 +22,7 @@ export const PlaylistsContainer = ({ history }) => {
 	};
 
 	return (
-		<div className='playlists-container'>
+		<div className='playlists-container '>
 			<div className='header'>
 				<h2>{categoryName}</h2>
 			</div>
@@ -43,7 +43,7 @@ export const PlaylistsContainer = ({ history }) => {
 				}
 			</ul>
 			<button className='goBack hvr-grow' onClick={goBack}>
-				Go back
+				{'< Go back'}
 			</button>
 		</div>
 	);

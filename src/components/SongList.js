@@ -22,7 +22,10 @@ export const SongList = ({ name, artists, album, id, index }) => {
 		history.replace(`/playlists/${categoryName}/song`);
 	};
 	return (
-		<li className='hvr-mine' onClick={setActiveSong}>
+		<li
+			className='hvr-mine animate__animated animate__fadeIn'
+			onClick={setActiveSong}
+		>
 			<Link
 				to={`/playlists/${categoryName}/song`}
 			>{`${index}.                ${name}`}</Link>
