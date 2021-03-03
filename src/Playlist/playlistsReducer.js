@@ -15,6 +15,12 @@ export const playlistsReducer = (state = {}, action) => {
 				isSelected: true,
 			};
 
+		case types.deactivateSelected:
+			return {
+				...state,
+				isSelected: false,
+			};
+
 		default:
 			return state;
 	}

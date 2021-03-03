@@ -2,10 +2,15 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../auth/AuthContext';
 import { CategoryContext } from '../categories/CategoriesContext';
 import { useFetchPlaylists } from '../hooks/useFetchPlaylists';
+import { PlaylistsContext } from '../Playlist/PlaylistsContext';
+import { SongsContext } from '../songs/SongsContext';
+import { types } from '../types/types';
 import { Playlist } from './Playlist';
 
 export const PlaylistsContainer = ({ history }) => {
 	const { authState } = useContext(AuthContext);
+	const { playlistDispatch } = useContext(PlaylistsContext);
+	const { songsDispatch } = useContext(SongsContext);
 	const { token } = authState;
 
 	const { activeCategory } = useContext(CategoryContext);
@@ -18,6 +23,13 @@ export const PlaylistsContainer = ({ history }) => {
 	const { playlists } = useFetchPlaylists(token, categoryId);
 
 	const goBack = () => {
+		playlistDispatch({
+			type: types.deactivateSelected,
+		});
+
+		songsDispatch({
+			type: types.clearSongs,
+		});
 		history.push('/');
 	};
 

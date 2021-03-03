@@ -21,6 +21,12 @@ export const songsReducer = (state = {}, action) => {
 				activeSong: action.payload,
 			};
 
+		case types.clearSongs:
+			return {
+				...state,
+				songs: [],
+			};
+
 		default:
 			return state;
 	}
