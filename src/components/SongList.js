@@ -19,7 +19,7 @@ export const SongList = ({ name, artists, album, id, index }) => {
 			},
 		});
 
-		history.push(`/playlists/${categoryName}/song`);
+		history.replace(`/playlists/${categoryName}/song`);
 	};
 	return (
 		<li className='hvr-mine' onClick={setActiveSong}>

@@ -243,6 +243,82 @@
   margin: auto;
   font-family: 'Montserrat', sans-serif; }
 
+.song-screen-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  height: 100vh; }
+
+.song-card-container {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid white;
+  border-radius: 50px;
+  width: 80%;
+  margin: auto;
+  height: 80%; }
+  .song-card-container img {
+    width: 50%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-right: 3px solid white; }
+  .song-card-container ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    color: white;
+    height: 50%;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 25px; }
+    .song-card-container ul li {
+      margin-bottom: 40px; }
+
+.song-description-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  color: #131313; }
+
+.song-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #5fd662;
+  border-top-right-radius: 50px;
+  border-left: 2px solid black;
+  width: 100%; }
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 80px; }
+
+.button {
+  text-align: center;
+  background-color: #5fd662;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 50px;
+  font-weight: 700;
+  width: 200px;
+  height: 40px;
+  margin-right: 20px; }
+
+.go-back {
+  text-align: center;
+  background-color: #eeee;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 5px;
+  border-radius: 50px;
+  font-weight: 700;
+  margin-left: 20px;
+  width: 200px;
+  height: 40px; }
+
 body {
   background-color: #131313;
   /* background-image: url('https://images.pexels.com/photos/734918/pexels-photo-734918.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'); */
