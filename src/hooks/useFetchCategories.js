@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import { AuthContext } from '../auth/AuthContext';
 import { CategoryContext } from '../categories/CategoriesContext';
 import { getCategories } from '../helpers/getCategories';
@@ -6,31 +6,23 @@ import { types } from '../types/types';
 
 export const useFetchCategories = () => {
 	const { categoriesDispatch } = useContext(CategoryContext);
-	const [state, setState] = useState({
-		categories: [],
-	});
-
 	const { authDispatch } = useContext(AuthContext);
 
-	useEffect(() => {
+	return async () => {
 		const abortController = new AbortController();
-		getCategories().then((data) => {
+		try {
+			const data = await getCategories();
+
 			authDispatch(setToken(data.token));
 			categoriesDispatch({
 				type: types.setCategories,
 				payload: data.categories,
 			});
-			setState({
-				categories: [...data.categories],
-			});
-		});
-
-		return function cleanUp() {
+		} catch (error) {
 			abortController.abort();
-		};
-	}, [authDispatch, categoriesDispatch]);
-
-	return state;
+			console.log(error);
+		}
+	};
 };
 
 const setToken = (token) => ({

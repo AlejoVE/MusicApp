@@ -5,7 +5,8 @@ import { CategoryContext } from '../categories/CategoriesContext';
 
 export const CategoryContainer = () => {
 	//get categories
-	useFetchCategories();
+	const getCategories = useFetchCategories();
+	getCategories();
 	const { categoriesState } = useContext(CategoryContext);
 	const { categories } = categoriesState;
 

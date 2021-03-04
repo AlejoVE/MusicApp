@@ -7,8 +7,6 @@ export const CategoryCard = ({ name, imgUrl, id }) => {
 	const { categoriesDispatch } = useContext(CategoryContext);
 
 	const handleClick = () => {
-		localStorage.setItem('categoryId', id);
-		localStorage.setItem('categoryName', name);
 		categoriesDispatch({
 			type: types.setActiveCategory,
 			payload: {
