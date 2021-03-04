@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { AuthContext } from '../auth/AuthContext';
 import { CategoryContext } from '../categories/CategoriesContext';
 import { useFetchPlaylists } from '../hooks/useFetchPlaylists';
@@ -9,6 +9,7 @@ export const CategoryCard = ({ name, imgUrl, id }) => {
 	const { categoriesDispatch } = useContext(CategoryContext);
 	const { authState } = useContext(AuthContext);
 	const { token } = authState;
+	const history = useHistory();
 
 	const getPlaylists = useFetchPlaylists(token, id);
 
@@ -21,18 +22,17 @@ export const CategoryCard = ({ name, imgUrl, id }) => {
 				name,
 			},
 		});
+		history.push(`/playlists/${id}`);
 	};
 	return (
 		<div
+			onClick={handleClick}
 			className='category-card hvr-grow'
 			style={{
 				backgroundImage: `url("${imgUrl}")`,
 			}}
 		>
 			<h2>{name}</h2>
-			<Link onClick={handleClick} className='link' to={`/playlists/${id}`}>
-				More...
-			</Link>
 		</div>
 	);
 };
