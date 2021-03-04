@@ -55,7 +55,8 @@
   width: 50%;
   position: relative;
   color: white;
-  text-align: center; }
+  text-align: center;
+  height: 100vh; }
   .not-selected-container img {
     position: absolute;
     width: 50%;
@@ -64,6 +65,8 @@
     right: 0;
     bottom: 0;
     margin: auto; }
+  .not-selected-container h2 {
+    margin-top: 100px; }
 
 .songs-container {
   display: flex;
@@ -71,7 +74,7 @@
   justify-content: center;
   width: 50%;
   overflow-y: auto;
-  height: 100vh; }
+  height: 92vh; }
   .songs-container ul {
     list-style: none;
     height: 90%; }

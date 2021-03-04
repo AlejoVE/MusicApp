@@ -2,12 +2,6 @@ import { types } from '../types/types';
 
 export const playlistsReducer = (state = {}, action) => {
 	switch (action.type) {
-		case types.getPlaylists:
-			return {
-				...state,
-				playlists: [...action.payload],
-			};
-
 		case types.setActivePlaylist:
 			return {
 				...state,
@@ -19,6 +13,18 @@ export const playlistsReducer = (state = {}, action) => {
 			return {
 				...state,
 				isSelected: false,
+			};
+
+		case types.setPlaylists:
+			return {
+				...state,
+				playlists: [...action.payload],
+			};
+
+		case types.clearPlaylists:
+			return {
+				...state,
+				playlists: [],
 			};
 
 		default:

@@ -11,11 +11,11 @@ import { songsReducer } from './songs/songsReducer';
 import { SongsContext } from './songs/SongsContext';
 
 const init = () => {
-	return { activePlaylistId: '', isSelected: false };
+	return { activePlaylistId: '', isSelected: false, playlists: [] };
 };
 
 const initCategories = () => {
-	return { activeCategory: '' };
+	return { activeCategory: '', categories: [] };
 };
 
 const initAuth = () => {

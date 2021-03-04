@@ -4,7 +4,7 @@
 	position: relative;
 	color: white;
 	text-align: center;
-
+	height: 100vh;
 	img {
 		position: absolute;
 		width: 50%;
@@ -13,5 +13,9 @@
 		right: 0;
 		bottom: 0;
 		margin: auto;
+	}
+
+	h2 {
+		margin-top: 100px;
 	}
 }

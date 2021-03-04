@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { CategoryCard } from './CategoryCard';
 import { useFetchCategories } from '../hooks/useFetchCategories';
+import { CategoryContext } from '../categories/CategoriesContext';
 
 export const CategoryContainer = () => {
-	const { categories } = useFetchCategories();
+	//get categories
+	useFetchCategories();
+	const { categoriesState } = useContext(CategoryContext);
+	const { categories } = categoriesState;
 
 	return (
 		<div className='category-container'>

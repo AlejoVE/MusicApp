@@ -9,18 +9,21 @@ import { Playlist } from './Playlist';
 
 export const PlaylistsContainer = ({ history }) => {
 	const { authState } = useContext(AuthContext);
-	const { playlistDispatch } = useContext(PlaylistsContext);
-	const { songsDispatch } = useContext(SongsContext);
 	const { token } = authState;
 
 	const { categoriesState } = useContext(CategoryContext);
-	const { activeCategory: myCategory } = categoriesState;
-	const { id, name } = myCategory;
+	const { activeCategory } = categoriesState;
+	const { id, name } = activeCategory;
 
-	const categoryId = localStorage.getItem('categoryId') || id;
-	const categoryName = localStorage.getItem('categoryName') || name;
+	useFetchPlaylists(token, id);
 
-	const { playlists } = useFetchPlaylists(token, categoryId);
+	const { playlistsState, playlistDispatch } = useContext(PlaylistsContext);
+	const { playlists } = playlistsState;
+
+	const { songsDispatch } = useContext(SongsContext);
+
+	// const categoryId = localStorage.getItem('categoryId') || id;
+	// const categoryName = localStorage.getItem('categoryName') || name;
 
 	const goBack = () => {
 		playlistDispatch({
@@ -36,7 +39,7 @@ export const PlaylistsContainer = ({ history }) => {
 	return (
 		<div className='playlists-container '>
 			<div className='header'>
-				<h2>{categoryName}</h2>
+				<h2>{name}</h2>
 			</div>
 			<ul className='list'>
 				{

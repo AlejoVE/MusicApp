@@ -8,6 +8,8 @@ export const types = {
 	getPlaylists: '[playlists] get lists of playlists',
 	getSongs: '[playlists] get songs in playlist',
 	setActivePlaylist: '[playlists] set active playlist',
+	setPlaylists: '[playlists] set playlists',
+	clearPlaylists: '[playlists] clear playlists',
 	deactivateSelected: '[playlists] deactivate selected',
 
 	setSongs: '[songs] set songs',

@@ -9,7 +9,7 @@ export const Footer = () => {
 					alt='github logo'
 				></img>
 			</a>
-			<p>Alejandro Montilla ©2021</p>
+			<p>Alejandro Montilla © 2021</p>
 		</footer>
 	);
 };
