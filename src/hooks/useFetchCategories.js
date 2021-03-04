@@ -13,6 +13,7 @@ export const useFetchCategories = () => {
 	const { authDispatch } = useContext(AuthContext);
 
 	useEffect(() => {
+		const abortController = new AbortController();
 		getCategories().then((data) => {
 			authDispatch(setToken(data.token));
 			categoriesDispatch({
@@ -23,6 +24,10 @@ export const useFetchCategories = () => {
 				categories: [...data.categories],
 			});
 		});
+
+		return function cleanUp() {
+			abortController.abort();
+		};
 	}, [authDispatch, categoriesDispatch]);
 
 	return state;

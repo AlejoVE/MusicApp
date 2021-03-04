@@ -2,11 +2,13 @@ const base_url = `https://api.spotify.com/v1/playlists`;
 
 export const getSongs = async (token, playlist_id) => {
 	const limit = 100;
+	const signal = AbortController.signal;
 
 	try {
 		const res = await fetch(
 			`${base_url}/${playlist_id}/tracks?limit=${limit}`,
 			{
+				signal: signal,
 				method: 'GET',
 				//prettier-ignore
 				headers: { 'Authorization': `Bearer ${token}`},

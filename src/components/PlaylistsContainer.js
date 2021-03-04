@@ -22,9 +22,6 @@ export const PlaylistsContainer = ({ history }) => {
 
 	const { songsDispatch } = useContext(SongsContext);
 
-	// const categoryId = localStorage.getItem('categoryId') || id;
-	// const categoryName = localStorage.getItem('categoryName') || name;
-
 	const goBack = () => {
 		playlistDispatch({
 			type: types.deactivateSelected,

@@ -27,6 +27,12 @@ export const songsReducer = (state = {}, action) => {
 				songs: [],
 			};
 
+		case types.songsEndLoading:
+			return {
+				...state,
+				songsIsLoading: false,
+			};
+
 		default:
 			return state;
 	}

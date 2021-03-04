@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "loading.css",
+	"sources": [
+		"../scss/loading.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,kBAAkB,CAAC;EAClB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,GAAG;EAChB,YAAY,EAAE,GAAG,GACjB"
+}

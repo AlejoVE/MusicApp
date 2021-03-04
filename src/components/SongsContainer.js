@@ -1,20 +1,10 @@
 import React, { useContext, useEffect } from 'react';
-import { AuthContext } from '../auth/AuthContext';
-import { useFetchSongs } from '../hooks/useFetchSongs';
-import { PlaylistsContext } from '../Playlist/PlaylistsContext';
 import { SongsContext } from '../songs/SongsContext';
 import { types } from '../types/types';
+import { Loading } from './Loading';
 import { SongList } from './SongList';
 
 export const SongsContainer = () => {
-	const { playlistsState } = useContext(PlaylistsContext);
-	const { activePlaylistId } = playlistsState;
-
-	const { authState } = useContext(AuthContext);
-	const { token } = authState;
-
-	useFetchSongs(token, activePlaylistId);
-
 	const { songsState, songsDispatch } = useContext(SongsContext);
 	const { songsIsLoading, songs } = songsState;
 
@@ -23,7 +13,7 @@ export const SongsContainer = () => {
 			type: types.setSongs,
 			payload: songs,
 		});
-	}, [activePlaylistId, songsDispatch]);
+	}, [songsDispatch]);
 
 	return (
 		<div className='songs-container'>
@@ -42,7 +32,7 @@ export const SongsContainer = () => {
 						);
 					})
 				) : (
-					<h2>Loading...</h2>
+					<Loading />
 				)}
 			</ul>
 		</div>

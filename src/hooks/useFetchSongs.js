@@ -1,24 +1,22 @@
-import { useState, useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import { getSongs } from '../helpers/getSongs';
 import { SongsContext } from '../songs/SongsContext';
 import { types } from '../types/types';
 
 export const useFetchSongs = (token, playlist_id) => {
 	const { songsDispatch } = useContext(SongsContext);
-	const [state, setState] = useState({
-		songs: [],
-	});
+	const abortController = new AbortController();
 
-	useEffect(() => {
-		getSongs(token, playlist_id).then((data) => {
+	return async () => {
+		try {
+			const data = await getSongs(token, playlist_id);
 			songsDispatch(setSongs(data));
-			setState({
-				songs: [...data],
-			});
-		});
-	}, [playlist_id, songsDispatch, token]);
-
-	return state;
+		} catch (error) {
+			songsDispatch({ type: types.songsEndLoading });
+			abortController.abort();
+			console.log(error);
+		}
+	};
 };
 
 const setSongs = (songs) => ({

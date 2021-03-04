@@ -2,6 +2,7 @@
 @import './PlaylistsScreen//Playlist';
 @import './PlaylistsScreen/NotSelected';
 @import './PlaylistsScreen/SongsContainer';
+@import './loading.scss';
 
 .playlists-screen-container {
 	display: flex;

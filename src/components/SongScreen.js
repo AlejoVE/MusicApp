@@ -14,9 +14,7 @@ export const SongScreen = () => {
 	const { release_date } = album;
 
 	const categoryName = localStorage.getItem('categoryName');
-	console.log('Album', album);
 	const songArtists = getArtistsString(artists);
-	console.log(songArtists);
 
 	const goBack = () => {
 		history.push(`/playlists/${categoryName}`);

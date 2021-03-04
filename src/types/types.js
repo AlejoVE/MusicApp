@@ -15,5 +15,6 @@ export const types = {
 	setSongs: '[songs] set songs',
 	setActiveSong: '[songs] set active song',
 	songsIsLoading: '[songs] songs is loading',
+	songsEndLoading: '[songs] songs finish loading',
 	clearSongs: '[songs] clear songs',
 };
