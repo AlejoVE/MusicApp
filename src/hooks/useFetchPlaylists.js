@@ -1,22 +1,22 @@
-import { useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import { getPlaylistByCategory } from '../helpers/getPlaylists';
 import { PlaylistsContext } from '../Playlist/PlaylistsContext';
 import { types } from '../types/types';
 
 export const useFetchPlaylists = (token, category_id) => {
 	const { playlistDispatch } = useContext(PlaylistsContext);
+	const abortController = new AbortController();
 
-	useEffect(() => {
-		const abortController = new AbortController();
-		getPlaylistByCategory(token, category_id).then((data) => {
+	return async () => {
+		try {
+			const data = await getPlaylistByCategory(token, category_id);
 			playlistDispatch({
 				type: types.setPlaylists,
 				payload: [...data],
 			});
-		});
-
-		return function cleanUp() {
+		} catch (error) {
 			abortController.abort();
-		};
-	}, [category_id, token, playlistDispatch]);
+			console.log(error);
+		}
+	};
 };

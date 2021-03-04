@@ -9,7 +9,6 @@ export const useFetchCategories = () => {
 	const { authDispatch } = useContext(AuthContext);
 
 	return async () => {
-		const abortController = new AbortController();
 		try {
 			const data = await getCategories();
 
@@ -19,7 +18,6 @@ export const useFetchCategories = () => {
 				payload: data.categories,
 			});
 		} catch (error) {
-			abortController.abort();
 			console.log(error);
 		}
 	};

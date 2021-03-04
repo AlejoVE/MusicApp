@@ -4,20 +4,24 @@ import { SongsContext } from '../songs/SongsContext';
 import { addSong } from '../helpers/addSong';
 import { getArtistsString } from '../helpers/getArtistsString';
 import { Footer } from './ui/Footer';
+import { CategoryContext } from '../categories/CategoriesContext';
 
 export const SongScreen = () => {
 	const history = useHistory();
+
+	const { categoriesState } = useContext(CategoryContext);
+	const { activeCategory } = categoriesState;
+	const { id: categoryId } = activeCategory;
 	const { songsState } = useContext(SongsContext);
 	const { activeSong } = songsState;
 	const { album, id, name, artists } = activeSong;
 	const { images, name: albumName } = album;
 	const { release_date } = album;
 
-	const categoryName = localStorage.getItem('categoryName');
 	const songArtists = getArtistsString(artists);
 
 	const goBack = () => {
-		history.push(`/playlists/${categoryName}`);
+		history.push(`/playlists/${categoryId}`);
 	};
 
 	const handleAddSong = () => {

@@ -8,7 +8,6 @@ import { useFetchSongs } from '../../hooks/useFetchSongs';
 export const Button = ({ value, id }) => {
 	const { songsDispatch } = useContext(SongsContext);
 	const { playlistDispatch } = useContext(PlaylistsContext);
-	// const { activePlaylistId } = playlistsState;
 
 	const { authState } = useContext(AuthContext);
 	const { token } = authState;

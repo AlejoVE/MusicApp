@@ -1,21 +1,14 @@
 import React, { useContext } from 'react';
-import { AuthContext } from '../auth/AuthContext';
 import { CategoryContext } from '../categories/CategoriesContext';
-import { useFetchPlaylists } from '../hooks/useFetchPlaylists';
 import { PlaylistsContext } from '../Playlist/PlaylistsContext';
 import { SongsContext } from '../songs/SongsContext';
 import { types } from '../types/types';
 import { Playlist } from './Playlist';
 
 export const PlaylistsContainer = ({ history }) => {
-	const { authState } = useContext(AuthContext);
-	const { token } = authState;
-
 	const { categoriesState } = useContext(CategoryContext);
 	const { activeCategory } = categoriesState;
-	const { id, name } = activeCategory;
-
-	useFetchPlaylists(token, id);
+	const { name } = activeCategory;
 
 	const { playlistsState, playlistDispatch } = useContext(PlaylistsContext);
 	const { playlists } = playlistsState;

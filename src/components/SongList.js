@@ -8,7 +8,7 @@ export const SongList = ({ name, artists, album, id, index }) => {
 	const { categoriesState } = useContext(CategoryContext);
 
 	const { activeCategory } = categoriesState;
-	const { name: categoryName } = activeCategory;
+	const { id: categoryId } = activeCategory;
 
 	const { songsDispatch } = useContext(SongsContext);
 	const history = useHistory();
@@ -24,7 +24,7 @@ export const SongList = ({ name, artists, album, id, index }) => {
 			},
 		});
 
-		history.replace(`/playlists/${categoryName}/song`);
+		history.push(`/playlists/${categoryId}/song`);
 	};
 	return (
 		<li
@@ -32,7 +32,7 @@ export const SongList = ({ name, artists, album, id, index }) => {
 			onClick={setActiveSong}
 		>
 			<Link
-				to={`/playlists/${categoryName}/song`}
+				to={`/playlists/${categoryId}/song`}
 			>{`${index}.                ${name}`}</Link>
 		</li>
 	);
