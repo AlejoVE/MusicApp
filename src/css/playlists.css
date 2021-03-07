@@ -29,6 +29,15 @@
   .list h2 {
     text-align: left; }
 
+.category-empty {
+  color: #eeee;
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
 .li-element {
   display: flex;
   flex-direction: row;

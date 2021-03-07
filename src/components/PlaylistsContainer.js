@@ -32,7 +32,11 @@ export const PlaylistsContainer = ({ history }) => {
 				<h2>{name}</h2>
 			</div>
 			<ul className='list'>
-				{
+				{playlists.length === 0 ? (
+					<div className='category-empty'>
+						<h2>This category is empty, please select another one.</h2>
+					</div>
+				) : (
 					// prettier/ignore
 					playlists.map(({ id, name, description, tracks }) => {
 						return (
@@ -45,7 +49,7 @@ export const PlaylistsContainer = ({ history }) => {
 							/>
 						);
 					})
-				}
+				)}
 			</ul>
 			<button className='goBack hvr-grow' onClick={goBack}>
 				{'< Go back'}
