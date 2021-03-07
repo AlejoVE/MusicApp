@@ -78,13 +78,6 @@
   .hvr-mine:active a {
     color: #131313; }
 
-.link {
-  font-size: 20px;
-  color: white;
-  position: absolute;
-  bottom: 25px;
-  left: 100px; }
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px; }
