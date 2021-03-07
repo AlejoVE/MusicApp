@@ -6,6 +6,7 @@ export const categoriesReducer = (state = {}, action) => {
 			return {
 				...state,
 				categories: [...action.payload],
+				isLoading: false,
 			};
 
 		case types.setActiveCategory:

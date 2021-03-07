@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { CategoryContainer } from './CategoryContainer';
 import { Footer } from './ui/Footer';
 

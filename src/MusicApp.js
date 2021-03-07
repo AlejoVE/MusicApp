@@ -15,7 +15,7 @@ const init = () => {
 };
 
 const initCategories = () => {
-	return { activeCategory: '', categories: [] };
+	return { activeCategory: '', categories: [], isLoading: true };
 };
 
 const initAuth = () => {

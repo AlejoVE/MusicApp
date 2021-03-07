@@ -18,6 +18,11 @@
   height: 50vh;
   margin-bottom: 30px; }
 
+.loading-component {
+  margin: auto;
+  margin-top: 120px;
+  margin-bottom: 150px; }
+
 /* Category card component */
 .category-card {
   width: 25%;
