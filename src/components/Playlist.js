@@ -2,6 +2,9 @@ import React from 'react';
 import { Button } from './ui/Button';
 
 export const Playlist = ({ name, description, tracks, id }) => {
+	if (description.includes('<a href=')) {
+		description = 'My cool description from Spotify';
+	}
 	return (
 		<li className='li-element'>
 			<div>
