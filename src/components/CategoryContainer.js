@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { CategoryCard } from './CategoryCard';
 import ReactLoading from 'react-loading';
 
@@ -8,7 +8,11 @@ import { CategoryContext } from '../categories/CategoriesContext';
 export const CategoryContainer = () => {
 	//Fetch categories from Spotify
 	const getCategories = useFetchCategories();
-	getCategories();
+
+	useEffect(() => {
+		getCategories();
+	}, []);
+
 	const { categoriesState } = useContext(CategoryContext);
 	const { categories, isLoading } = categoriesState;
 
