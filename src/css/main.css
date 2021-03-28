@@ -3,10 +3,13 @@
   background-color: #5fd662;
   width: 100%;
   text-align: center;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  border: 1px solid #eeee; }
+  .header-container h1 {
+    font-size: 50px; }
 
 .header-img {
-  width: 60%; }
+  width: 40%; }
 
 .category-container {
   display: flex;
@@ -16,7 +19,7 @@
   align-items: center;
   margin: auto;
   height: 50vh;
-  margin-bottom: 30px; }
+  margin-bottom: 50px; }
 
 .loading-component {
   margin: auto;
@@ -44,7 +47,18 @@
   width: 80%;
   height: 100vh;
   margin: auto;
-  justify-content: center; }
+  margin-top: 0;
+  padding-top: 0;
+  justify-content: center;
+  background-color: #131313;
+  border: 1px solid #eeee; }
+
+.sub-title {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px; }
 
 .hvr-grow {
   display: inline-block;

@@ -5,9 +5,20 @@
 	width: 80%;
 	height: 100vh;
 	margin: auto;
+	margin-top: 0;
+	padding-top: 0;
 	justify-content: center;
+	background-color: $black-spotify;
+	border: 1px solid $gray;
 }
 
+.sub-title {
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
 .hvr-grow {
 	display: inline-block;
 	vertical-align: middle;

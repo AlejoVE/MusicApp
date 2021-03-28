@@ -60,7 +60,6 @@
     margin-bottom: 10px; }
 
 .not-selected-container {
-  background-color: #131313;
   width: 50%;
   position: relative;
   color: white;
@@ -73,7 +72,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto; }
+    margin: auto;
+    filter: invert(67%) sepia(97%) saturate(280%) hue-rotate(69deg) brightness(90%) contrast(95%); }
   .not-selected-container h2 {
     margin-top: 100px; }
 
@@ -114,7 +114,9 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100vh;
   margin: auto;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  background-color: #131313; }
 
 /*# sourceMappingURL=playlists.css.map */

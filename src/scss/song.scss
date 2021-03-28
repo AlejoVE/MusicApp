@@ -17,6 +17,7 @@
 	width: 80%;
 	margin: auto;
 	height: 80%;
+	background-color: $black-spotify;
 
 	img {
 		width: 50%;
@@ -57,6 +58,7 @@
 	border-top-right-radius: 50px;
 	border-left: 2px solid black;
 	width: 100%;
+	border-bottom: 3px solid $gray;
 }
 
 .buttons-container {
