@@ -33,7 +33,7 @@
 	flex-direction: column;
 	list-style: none;
 	justify-content: space-around;
-	height: 80%;
+	height: 70%;
 	padding-inline-start: 0px;
 	h2 {
 		text-align: left;
@@ -46,6 +46,7 @@
 	justify-content: center;
 	width: 100%;
 	height: 10%;
+	padding-top: 10px;
 	.goBack {
 		text-align: center;
 		background-color: $green-spotify;
