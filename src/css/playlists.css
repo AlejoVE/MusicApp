@@ -9,7 +9,34 @@
     text-align: center;
     margin-block-start: 0;
     margin-block-end: 0; }
-  .playlists-container .goBack {
+
+.header {
+  background-color: #5fd662;
+  height: 10%;
+  border-bottom: 1px solid #eeee; }
+  .header h2 {
+    font-size: 40px;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 0; }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-around;
+  height: 80%;
+  padding-inline-start: 0px; }
+  .list h2 {
+    text-align: left; }
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10%; }
+  .button-container .goBack {
     text-align: center;
     background-color: #5fd662;
     font-family: 'Montserrat', sans-serif;
@@ -19,22 +46,6 @@
     height: 40px;
     display: block;
     margin: auto; }
-
-.header {
-  background-color: #5fd662;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  border-bottom: 1px solid #eeee; }
-  .header h2 {
-    font-size: 40px; }
-
-.list {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding-inline-start: 0px; }
-  .list h2 {
-    text-align: left; }
 
 .category-empty {
   color: #eeee;
@@ -49,12 +60,15 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: #131313;
+  height: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eeee; }
   .li-element div {
-    width: 80%; }
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
   .li-element h2,
   .li-element p,
   .li-element em {

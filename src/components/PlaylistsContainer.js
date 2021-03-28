@@ -51,9 +51,11 @@ export const PlaylistsContainer = ({ history }) => {
 					})
 				)}
 			</ul>
-			<button className='goBack hvr-grow' onClick={goBack}>
-				{'< Go back'}
-			</button>
+			<div className='button-container'>
+				<button className='goBack hvr-grow' onClick={goBack}>
+					{'< Go back'}
+				</button>
+			</div>
 		</div>
 	);
 };
