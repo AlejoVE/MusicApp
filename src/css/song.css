@@ -4,8 +4,7 @@
   align-items: center;
   width: 100%;
   margin: auto;
-  height: 100vh;
-  background-color: #131313; }
+  height: 100vh; }
 
 .song-card-container {
   display: flex;
