@@ -1,6 +1,9 @@
 @import '../var';
 
 .playlists-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	width: 50%;
 	background-color: $black-spotify;
 	border: 1px ridge $gray;
@@ -21,7 +24,6 @@
 		height: 40px;
 		display: block;
 		margin: auto;
-		margin-bottom: 20px;
 	}
 }
 
@@ -29,9 +31,16 @@
 	background-color: $green-spotify;
 	padding-bottom: 5px;
 	padding-top: 5px;
+	border-bottom: 1px solid $gray;
+
+	h2 {
+		font-size: 40px;
+	}
 }
 
 .list {
+	display: flex;
+	flex-direction: column;
 	list-style: none;
 	padding-inline-start: 0px;
 	h2 {

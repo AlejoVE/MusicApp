@@ -1,4 +1,7 @@
 .playlists-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 50%;
   background-color: #131313;
   border: 1px ridge #eeee; }
@@ -15,15 +18,19 @@
     width: 200px;
     height: 40px;
     display: block;
-    margin: auto;
-    margin-bottom: 20px; }
+    margin: auto; }
 
 .header {
   background-color: #5fd662;
   padding-bottom: 5px;
-  padding-top: 5px; }
+  padding-top: 5px;
+  border-bottom: 1px solid #eeee; }
+  .header h2 {
+    font-size: 40px; }
 
 .list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding-inline-start: 0px; }
   .list h2 {
