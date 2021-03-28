@@ -51,6 +51,15 @@ export const SongScreen = () => {
 							Add song to Playlist
 						</button>
 					</div>
+
+					<a
+						href='https://open.spotify.com/playlist/4qhYOIILXPZGcwOAOd9Vt6'
+						target='_blank'
+						rel='noreferrer'
+						className='text-warning stretched-link'
+					>
+						Check the playlist! 🛸
+					</a>
 				</div>
 			</div>
 			<Footer />
