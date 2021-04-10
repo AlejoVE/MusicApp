@@ -1,6 +1,12 @@
 # Music-App
 
-This is a personal project I did to practice my React skills and to test the Spotify API.
+This is a personal project I'm doing to practice my React skills and to test the Spotify API.
+
+### [Check the app here](https://music-app-alejove.netlify.app/)
+
+## Preview
+
+![MusicApp](https://user-images.githubusercontent.com/59319966/114272120-10b1a380-9a15-11eb-9476-da413ba717d7.png)
 
 ## Features
 
@@ -19,6 +25,10 @@ This is a personal project I did to practice my React skills and to test the Spo
 -  Spotify API
 -  Netlify
 
-# Developer
+## Developer
 
 -  [Alejandro Montilla](https://github.com/AlejoVE)
+
+### status:
+
+-  In process
